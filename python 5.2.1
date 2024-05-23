@@ -1,0 +1,10 @@
+def unique_elements():
+    n = int(input("Enter the array size : "))
+    arr = list(map(int, input("Input {} elements in an array : ".format(n)).split()))
+    unique_arr = list(set(arr))
+    unique_arr.sort()
+    print("The unique elements found in the array are : ")
+    for i in unique_arr:
+        print(i, end=" ")
+
+unique_elements()
