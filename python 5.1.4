@@ -1,0 +1,25 @@
+import array as arr
+
+def process_array(numbers, insert_num, insert_loc, delete_loc):
+    print("Current array:")
+    for i, num in enumerate(numbers):
+        print(f"{i}: {num}")
+    numbers.insert(insert_loc, insert_num)
+    print(f"\nInserted {insert_num} at location {insert_loc}:")
+    for i, num in enumerate(numbers):
+        print(f"{i}: {num}")
+    del numbers[delete_loc]
+    print(f"\nDeleted number at location {delete_loc}:")
+    for i, num in enumerate(numbers):
+        print(f"{i}: {num}")
+
+numbers = arr.array('i', [])
+add_more = "yes"
+while add_more == "yes":
+    num = int(input("Enter a number: "))
+    numbers.append(num)
+    add_more = input("Do you want to add more numbers? (yes/no) ")
+insert_num = int(input("Enter a number to insert: "))
+insert_loc = int(input("Enter the location to insert the number: "))
+delete_loc = int(input("Enter the location of the number to delete: "))
+process_array(numbers, insert_num, insert_loc, delete_loc)
