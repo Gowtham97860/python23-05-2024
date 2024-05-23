@@ -1,0 +1,14 @@
+def move_zeros_to_end(arr):
+    n = len(arr)
+    if n == 0:
+        print("Invalid input")
+        return
+    zero_index = 0
+    for i in range(n):
+        if arr[i] != 0:
+            arr[zero_index], arr[i] = arr[i], arr[zero_index]
+            zero_index += 1
+    print(arr)
+
+array = [1, 2, 3, 0, 0, 0, 6]
+move_zeros_to_end(array)
