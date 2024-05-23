@@ -1,0 +1,19 @@
+import math
+
+def process_numbers(numbers):
+    total_sum = sum(numbers)
+    mean = total_sum / len(numbers)
+    variance = sum((num - mean) ** 2 for num in numbers) / len(numbers)
+    deviation = math.sqrt(variance)
+    print(f"Mean: {mean}")
+    print(f"Variance: {variance}")
+    print(f"Deviation: {deviation}")
+
+numbers = []
+add_more = "yes"
+while add_more == "yes":
+    num = float(input("Enter a number: "))
+    numbers.append(num)
+    add_more = input("Do you want to add more numbers? (yes/no) ")
+
+process_numbers(numbers)
