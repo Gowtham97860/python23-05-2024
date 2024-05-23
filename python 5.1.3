@@ -1,0 +1,19 @@
+import array as arr
+
+numbers = arr.array('i', [])
+add_more = "yes"
+while add_more == "yes":
+    num = int(input("Enter a number: "))
+    numbers.append(num)
+    add_more = input("Do you want to add more numbers? (yes/no) ")
+
+largest = numbers[0]
+smallest = numbers[0]
+for num in numbers:
+    if num > largest:
+        largest = num
+    if num < smallest:
+        smallest = num
+
+print("The largest number is:", largest)
+print("The smallest number is:", smallest)
