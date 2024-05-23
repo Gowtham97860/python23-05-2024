@@ -1,0 +1,13 @@
+def remove_duplicates(numbers):
+    unique_numbers = []
+    for num in numbers:
+        if num not in unique_numbers:
+            unique_numbers.append(num)
+    return unique_numbers
+
+array_size = int(input("Enter the array size: "))
+print(f"Input {array_size} elements in an array:")
+numbers = list(map(int, input().split()))
+unique_numbers = remove_duplicates(numbers)
+print("The unique elements found in the array are:")
+print(unique_numbers)
