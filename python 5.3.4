@@ -1,0 +1,14 @@
+def find_product(arr1, arr2):
+    n = len(arr1)
+    if n != len(arr2):
+        print("Invalid array sizes")
+        return
+    max_element = max(arr1)
+    min_element = min(arr2)
+    product = max_element * min_element
+    print(f"max element in first array is {max_element} and min element in second array is {min_element}")
+    print(f"The product of these two is {product}")
+
+arr1 = [4, 2, 6]
+arr2 = [8, 2, 6]
+find_product(arr1, arr2)
