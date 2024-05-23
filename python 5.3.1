@@ -1,0 +1,22 @@
+import math
+
+def find_largest_non_square(arr):
+    n = len(arr)
+    if n == 0:
+        print("Invalid input")
+        return
+    max_non_square = -1
+    for num in arr:
+        if num > max_non_square and not is_perfect_square(num):
+            max_non_square = num
+    if max_non_square == -1:
+        print("No number is a perfect square")
+    else:
+        print(max_non_square)
+
+def is_perfect_square(num):
+    root = math.isqrt(num)
+    return root * root == num
+
+array = [16, 20, 15, 25, 2, 10]
+find_largest_non_square(array)
