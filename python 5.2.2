@@ -1,0 +1,12 @@
+def sort_array():
+    n = int(input("Enter how many values you want to read : "))
+    arr = []
+    for i in range(n):
+        arr.append(int(input(f"Enter the value of a[{i}] : ")))
+    arr.sort()
+    print("Array sorted in ascending order =", end=" ")
+    for i in arr:
+        print(i, end=" ")
+    print()
+
+sort_array()
